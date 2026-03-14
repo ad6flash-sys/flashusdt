@@ -15,7 +15,45 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
+<style>
+      :root {
+        --primary: #1e293b; 
+        --accent: #3b82f6;  
+        --bg: #0f172a;      
+      }
+      body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background-color: var(--bg) !important;
+      }
+      #root {
+        display: flex !important;
+        justify-content: center !important; /* Centra horizontalmente */
+        align-items: center !important;     /* Centra verticalmente */
+        min-height: 100vh;
+        width: 100%;
+        background-color: var(--bg);
+        color: white !important;
+      }
+      /* Ajuste para que el contenido no se pegue a los bordes en el celular */
+      #root > div {
+        width: 100%;
+        max-width: 450px; /* Tamaño ideal para una app de crypto */
+        padding: 20px;
+        margin: auto;
+      }
+      div, section, button, input {
+        border-radius: 16px !important;
+      }
+      button {
+        background-color: var(--accent) !important;
+        transition: transform 0.2s ease;
+      }
+      button:hover {
+        transform: scale(1.02);
+      }
+    </style>
  
     
     <link rel="icon" href="/lovable-uploads/b8f6b574-12a2-4fb1-abad-2927c09cd7ad.png" type="image/png">
