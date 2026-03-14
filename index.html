@@ -15,6 +15,121 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <style>
+      :root {
+        --primary-blue: #3b82f6;
+        --dark-bg: #020617;
+        --card-bg: #0f172a;
+        --text-gray: #94a3b8;
+      }
+
+      /* Reseteo y Centrado Absoluto */
+      body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--dark-bg) !important;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+      }
+
+      /* Contenedor Principal (El que estaba a la izquierda, ahora al centro) */
+      #root {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100%;
+        min-height: 100vh;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      /* Estilo de la "Tarjeta" profesional */
+      #root > div {
+        background-color: var(--card-bg) !important;
+        width: 100%;
+        max-width: 400px;
+        padding: 35px 25px;
+        border-radius: 28px !important;
+        border: 1px solid rgba(255, 255, 255, 0.08) !important;
+        /* Sombra Premium (Glow Azul) */
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 20px rgba(59, 130, 246, 0.15) !important;
+        text-align: center;
+        position: relative;
+      }
+
+      /* Ajustes de Títulos y Etiquetas Multilingües */
+      h1, h2, p {
+        margin: 10px 0;
+        color: white !important;
+      }
+
+      .multi-lang-label {
+        font-size: 10px;
+        color: var(--text-gray);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 4px;
+        display: block;
+      }
+
+      /* Inputs y Selectores */
+      input, select {
+        width: 100%;
+        background-color: #1e293b !important;
+        border: 1px solid #334155 !important;
+        border-radius: 14px !important;
+        padding: 12px !important;
+        color: white !important;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+        outline: none;
+      }
+
+      /* Botón Internacional (ES/EN/JP) */
+      button {
+        width: 100%;
+        background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 16px !important;
+        padding: 16px !important;
+        font-weight: 700 !important;
+        cursor: pointer;
+        transition: all 0.3s ease !important;
+        margin-top: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3) !important;
+      }
+
+      button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 15px 20px -5px rgba(59, 130, 246, 0.4) !important;
+      }
+
+      button::after {
+        content: " / 送信"; /* Agrega el japonés al botón */
+        font-weight: 400;
+        opacity: 0.8;
+      }
+
+      /* Enlace de LINE */
+      .line-link {
+        display: inline-flex;
+        align-items: center;
+        margin-top: 20px;
+        color: #22c55e;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    </style>
     
     <link rel="icon" href="/lovable-uploads/b8f6b574-12a2-4fb1-abad-2927c09cd7ad.png" type="image/png">
     <script type="module" crossorigin src="/assets/index-DrNA49EY.js"></script>
