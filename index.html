@@ -1,31 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flash USDT Generator free</title>
-    <meta name="description" content="Flash USDT Generator free - Professional blockchain technology for instant Flash USDT TRC20 generation" />
-    <meta name="author" content="Lovable" />
-
-    <meta property="og:title" content="Flash USDT Generator free" />
-    <meta property="og:description" content="Flash USDT Generator free - Professional blockchain technology for instant Flash USDT TRC20 generation" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGP Connect | Global Crypto Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     
-    <link rel="icon" href="/lovable-uploads/b8f6b574-12a2-4fb1-abad-2927c09cd7ad.png" type="image/png">
-    <script type="module" crossorigin src="/assets/index-DrNA49EY.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Dee3EUee.css">
-  </head>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #020617;
+            background-image: 
+                radial-gradient(circle at 50% -20%, #1e1b4b, transparent),
+                radial-gradient(circle at 0% 100%, #0f172a, transparent);
+            color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
 
-  <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-  </body>
+        .glass-card {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 20px rgba(59, 130, 246, 0.1);
+        }
+
+        .neo-input {
+            background: rgba(2, 6, 23, 0.6) !important;
+            border: 1px solid rgba(59, 130, 246, 0.2) !important;
+            transition: all 0.3s ease;
+        }
+
+        .neo-input:focus {
+            border-color: #3b82f6 !important;
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .btn-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 25px -5px rgba(59, 130, 246, 0.5);
+            filter: brightness(1.1);
+        }
+
+        /* Animación suave de entrada */
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="p-4">
+
+    <div class="max-w-md w-full glass-card rounded-[2.5rem] p-8 md:p-10 fade-in">
+        <div class="text-center mb-8">
+            <div class="w-16 h-16 bg-blue-600/20 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-blue-500/30">
+                <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                </svg>
+            </div>
+            <h1 class="text-2xl font-bold tracking-tight text-white">SGP <span class="text-blue-500">CONNECT</span></h1>
+            <p class="text-slate-400 text-xs mt-2 uppercase tracking-[0.2em]">Global Crypto Tracker</p>
+        </div>
+
+        <div class="space-y-3 mb-8">
+            <div class="flex justify-between items-center p-4 bg-blue-500/5 rounded-2xl border border-blue-500/10">
+                <span class="text-sm text-slate-400">BTC Market</span>
+                <span id="btc-price" class="font-bold text-white text-lg">---</span>
+            </div>
+            <div class="flex justify-between items-center p-4 bg-green-500/5 rounded-2xl border border-green-500/10">
+                <span class="text-sm text-slate-400">USDT Price (+5%)</span>
+                <span id="usdt-price" class="font-bold text-green-400 text-lg">---</span>
+            </div>
+        </div>
+
+        <form id="orderForm" class="space-y-4">
+            <select id="currency" onchange="updatePrices()" class="w-full neo-input rounded-xl p-3.5 text-sm text-white outline-none">
+                <option value="usd">USD - US Dollar</option>
+                <option value="jpy">JPY - Japanese Yen</option>
+                <option value="eur">EUR - Euro</option>
+            </select>
+
+            <input type="email" id="email" placeholder="Email / 📩" required class="w-full neo-input rounded-xl p-3.5 text-sm text-white outline-none">
+            
+            <input type="number" id="amount" placeholder="Amount / 💰" required class="w-full neo-input rounded-xl p-3.5 text-sm text-white outline-none">
+
+            <button type="submit" id="submitBtn" class="w-full btn-gradient text-white font-bold py-4 rounded-2xl text-xs tracking-[0.1em] mt-2">
+                SEND REQUEST / 送信
+            </button>
+        </form>
+
+        <div class="mt-8 pt-6 border-t border-slate-800/50 text-center">
+            <a href="https://line.me/R/ti/p/@tusocio_jp" class="text-slate-500 hover:text-green-500 text-[10px] transition-colors uppercase tracking-widest">
+                Official Support via LINE
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxGuxfK9Eq5BQaum9Qvxwrd8r9cVtoBP6Y4kQqllQwnpfAesMaEsd-92OBIdNIiTY-ZVw/exec';
+        const fee = 1.05;
+
+        async function updatePrices() {
+            const curr = document.getElementById('currency').value;
+            const sym = curr === 'jpy' ? '¥' : (curr === 'eur' ? '€' : '$');
+            try {
+                const res = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,tether&vs_currencies=${curr}`);
+                const data = await res.json();
+                document.getElementById('btc-price').innerText = sym + ' ' + (data.bitcoin[curr] * fee).toLocaleString();
+                document.getElementById('usdt-price').innerText = sym + ' ' + (data.tether[curr] * fee).toLocaleString();
+            } catch (e) { console.log("Price error"); }
+        }
+
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            btn.disabled = true; btn.innerText = 'PROCESING...';
+
+            const payload = {
+                email: document.getElementById('email').value,
+                cantidad: document.getElementById('amount').value,
+                moneda: document.getElementById('currency').value
+            };
+
+            fetch(scriptURL, { method: 'POST', mode: 'no-cors', body: JSON.stringify(payload)})
+            .then(() => {
+                alert('Success! / Enviado / 送信完了');
+                this.reset();
+                btn.disabled = false; btn.innerText = 'SEND REQUEST / 送信';
+            })
+            .catch(() => {
+                alert('Error connecting.');
+                btn.disabled = false;
+            });
+        });
+
+        updatePrices();
+        setInterval(updatePrices, 30000);
+    </script>
+</body>
 </html>
-   
