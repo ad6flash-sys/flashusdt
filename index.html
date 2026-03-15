@@ -17,41 +17,66 @@
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 <style>
       :root {
-        --primary: #1e293b; 
-        --accent: #3b82f6;  
-        --bg: #0f172a;      
+        --primary: #3b82f6;
+        --bg-dark: #020617;
+        --card-bg: rgba(15, 23, 42, 0.8);
       }
+
       body, html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        background-color: var(--bg) !important;
+        margin: 0; padding: 0; height: 100%;
+        background-color: var(--bg-dark) !important;
+        /* Efecto de malla de fondo como el original */
+        background-image: 
+          radial-gradient(circle at 50% -20%, #1e1b4b, transparent),
+          radial-gradient(circle at 50% 120%, #020617, transparent) !important;
+        display: flex; justify-content: center; align-items: center;
+        font-family: 'Inter', system-ui, sans-serif;
       }
+
       #root {
-        display: flex !important;
-        justify-content: center !important; /* Centra horizontalmente */
-        align-items: center !important;     /* Centra verticalmente */
-        min-height: 100vh;
-        width: 100%;
-        background-color: var(--bg);
-        color: white !important;
+        width: 100%; display: flex; justify-content: center; align-items: center;
       }
-      /* Ajuste para que el contenido no se pegue a los bordes en el celular */
+
+      /* Estilo de la tarjeta idéntico al original */
       #root > div {
-        width: 100%;
-        max-width: 450px; /* Tamaño ideal para una app de crypto */
-        padding: 20px;
-        margin: auto;
+        width: 90%; max-width: 400px;
+        background: var(--card-bg) !important;
+        backdrop-filter: blur(12px) !important;
+        border-radius: 24px !important;
+        border: 1px solid rgba(59, 130, 246, 0.2) !important;
+        padding: 30px !important;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 20px rgba(59, 130, 246, 0.1) !important;
+        animation: fadeIn 0.8s ease-out;
       }
-      div, section, button, input {
-        border-radius: 16px !important;
+
+      /* Animación de entrada suave */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
       }
+
+      /* Estilo de botones con brillo */
       button {
-        background-color: var(--accent) !important;
-        transition: transform 0.2s ease;
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+        box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4) !important;
+        border: none !important;
+        transition: all 0.3s ease !important;
       }
+
       button:hover {
-        transform: scale(1.02);
+        filter: brightness(1.1);
+        transform: translateY(-1px);
+        box-shadow: 0 8px 20px rgba(59, 130, 246, 0.5) !important;
+      }
+
+      input, select {
+        background: rgba(30, 41, 59, 0.5) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        transition: border 0.3s ease;
+      }
+
+      input:focus {
+        border-color: var(--primary) !important;
       }
     </style>
  
